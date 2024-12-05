@@ -107,12 +107,53 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     return false;
 }
 
-// For rotary encoder window switching
+#include "features/achordion.h"
+
 void matrix_scan_user(void) {
+    achordion_task();
+
+    // For rotary encoder window switching
     if (is_alt_tab_active) {
         if (timer_elapsed(alt_tab_timer) > 750) {
             unregister_code(KC_LALT);
             is_alt_tab_active = false;
         }
+    }
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+    if (!process_achordion(keycode, record)) {
+        return false;
+    }
+    return true;
+}
+
+bool achordion_chord(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record, uint16_t other_keycode, keyrecord_t* other_record) {
+    // Also allow same-hand holds when the other key is in the rows outside the
+    // alphas. I need the `% (MATRIX_ROWS / 2)` because my keyboards are split.
+    const uint8_t row = other_record->event.key.row % (MATRIX_ROWS / 2);
+    if (row < 1 || row > 3) {
+        return true;
+    }
+
+    return achordion_opposite_hands(tap_hold_record, other_record);
+}
+
+uint16_t achordion_timeout(uint16_t tap_hold_keycode) {
+    switch (tap_hold_keycode) {
+        default:
+            return 200;
+    }
+}
+
+bool achordion_eager_mod(uint8_t mod) {
+    switch (mod) {
+        case MOD_LSFT:
+        case MOD_LCTL:
+        case MOD_LALT:
+            return true; // Eagerly apply Shift, Ctrl, and Alt mods.
+
+        default:
+            return false;
     }
 }

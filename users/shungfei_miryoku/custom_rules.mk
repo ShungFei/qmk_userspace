@@ -13,3 +13,5 @@ EXTRAKEY_ENABLE = yes # Audio control and System control
 AUTO_SHIFT_ENABLE = no
 
 MIDI_ENABLE = yes
+
+SRC += features/achordion.c
