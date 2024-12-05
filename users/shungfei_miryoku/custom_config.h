@@ -89,6 +89,10 @@ MIRYOKU_X(NUM,    "Num") \
 MIRYOKU_X(SYM,    "Sym") \
 MIRYOKU_X(FUN,    "Fun")
 
+#undef TAPPING_TERM
+#define TAPPING_TERM 100
+#define PERMISSIVE_HOLD
+
 // Squeezing some extra space
 
 #undef LOCKING_SUPPORT_ENABLE
