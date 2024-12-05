@@ -1,6 +1,15 @@
 {
     "userspace_version": "1.1",
     "build_targets": [
-        ["keebio/iris/rev6", "shungfei_miryoku"]
+        [
+            "keebio/iris/rev6",
+            "shungfei_miryoku",
+            {
+                "MIRYOKU_ALPHAS": "COLEMAKDH",
+                "MIRYOKU_CLIPBOARD": "WIN",
+                "MIRYOKU_EXTRA": "MIDI",
+                "MIRYOKU_TAP": "OSUMANIA"
+            }
+        ]
     ]
 }
