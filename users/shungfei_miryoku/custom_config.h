@@ -15,17 +15,17 @@ U_NP,              U_NP,              KC_ESC,            KC_SPC,            KC_T
 
 #define IRIS_ALTERNATIVES_TAP_CUSTOMDH \
 TD(U_TD_U_BASE), KC_1,   KC_2,   KC_3,   KC_4,   KC_5,                      KC_6,   KC_7,  KC_8,    KC_9,   KC_0,    TD(U_TD_U_BASE),\
-KC_LBRC,    KC_Q,   KC_W,   KC_F,   KC_P,   KC_B,                      KC_J,   KC_L,  KC_U,    KC_Y,   KC_QUOT, KC_RBRC, \
-KC_SCLN,    KC_A,   KC_R,   KC_S,   KC_T,   KC_G,                      KC_M,   KC_N,  KC_E,    KC_I,   KC_O,    KC_EQL, \
-KC_GRV,     KC_Z,   KC_X,   KC_C,   KC_D,   KC_V,   KC_MPLY,  KC_MUTE, KC_K,   KC_H,  KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
+KC_LBRC,         KC_Q,   KC_W,   KC_F,   KC_P,   KC_B,                      KC_J,   KC_L,  KC_U,    KC_Y,   KC_QUOT, KC_RBRC, \
+KC_SCLN,         KC_A,   KC_R,   KC_S,   KC_T,   KC_G,                      KC_M,   KC_N,  KC_E,    KC_I,   KC_O,    KC_EQL, \
+KC_GRV,          KC_Z,   KC_X,   KC_C,   KC_D,   KC_V,   KC_MPLY,  KC_MUTE, KC_K,   KC_H,  KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
                                     KC_ESC, KC_SPC, KC_TAB,   KC_ENT,  KC_SPC, KC_DEL
 
 #define IRIS_ALTERNATIVES_MIDI \
 TD(U_TD_U_BASE), MI_Ds3,   MI_F3,   MI_G3,   MI_A3,   MI_B3,                       KC_6,    KC_7,  KC_8,    KC_9,   KC_0,    TD(U_TD_U_BASE),\
 MI_Gs2,          MI_As2,   MI_C3,   MI_D3,   MI_E3,   MI_Fs3,                      KC_J,    KC_L,  KC_U,    KC_Y,   KC_QUOT, KC_RBRC, \
 MI_Ds2,          MI_F2,    MI_G2,   MI_A2,   MI_B2,   MI_Cs3,                      KC_M,    KC_N,  KC_E,    KC_I,   KC_O,    KC_EQL, \
-MI_As1,          MI_C2,    MI_D2,   MI_E2,   MI_Fs2,  MI_Gs2,   KC_MPLY,  KC_MUTE, KC_K,    KC_H,  KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
-                                       MI_TRSD, MI_TRSU,  MI_SUST,   KC_ENT,  MI_OCTD, MI_OCTU
+MI_As1,          MI_C2,    MI_D2,   MI_E2,   MI_Fs2,  MI_Gs2,  KC_MPLY,   KC_MUTE, KC_K,    KC_H,  KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
+                                             MI_TRSD, MI_TRSU, MI_SUST,   KC_ENT,  MI_OCTD, MI_OCTU
 
 // Modified miryoku with unused keys and rotary encoders
 #define MIRYOKU_MAPPING(\
